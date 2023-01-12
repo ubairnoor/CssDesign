@@ -4,7 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  background-color: cornsilk;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0) 0%,
+    #ecffed 100%
+  );
   font-family: sans-serif;
   height: 100vh;
   display: flex;
@@ -13,34 +17,68 @@ body {
 }
 
 .skill {
-  height: 160px;
-  width: 160px;
-
+  width: 326px;
+  height: 326px;
   position: relative;
 }
 .outer {
-  height: 160px;
-  width: 160px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  background: white;
+  width: 327px;
+  height: 326px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   border-radius: 50%;
 }
-
-.inner {
-  height: 120px;
-  width: 120px;
+.secondaryOuter {
+  width: 326px;
+  height: 326px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-left: 5px dashed #56e453;
+  border-bottom: 10px solid #039800;
+  border-right: 5px dashed #56e453;
+  border-top: 5px dashed #56e453;
   border-radius: 50%;
+  transition: 3s;
+}
+.secondaryOuter:hover {
+  border-left: 10px solid #039800;
+}
+.inner {
+  width: 254px;
+  height: 254px;
+  border-radius: 50%;
+  border: 1px solid #e0f2ff;
   display: flex;
   align-items: center; /* center along y axis*/
   justify-content: center; /* center along x axis*/
-  box-shadow: inset 4px 4px 4px 4px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    0.5px 0.5px 0px rgba(255, 255, 255, 1),
-    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 24px 11px rgba(0, 0, 0, 0.06);
+  transition: 1s;
 }
+
 #number {
   font-weight: 600;
   color: #555;
 }
+
+/* circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 10px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: anim 2s linear forwards;
+}
+/* @keyframes anim {
+  100% {
+    stroke-dashoffset: 157.5;
+  }
+} */
+/* svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
