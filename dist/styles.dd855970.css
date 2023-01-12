@@ -13,10 +13,9 @@ body {
 }
 
 .skill {
-  border: 1px solid red;
   height: 160px;
   width: 160px;
-  background-color: rebeccapurple;
+
   position: relative;
 }
 .outer {
